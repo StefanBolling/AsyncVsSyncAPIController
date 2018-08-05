@@ -6,15 +6,15 @@ namespace AsyncVsSyncAPIController.Controllers
     [RoutePrefix("sync")]
     public class SyncController : ApiController
     {
-        private const string googleUrl = "https://www.google.com";
+        private const string url = "http://www.bing.com/";
 
-        [Route("getgooglepagelength")]
-        public IHttpActionResult GetGooglePageLength()
+        [Route("getpagecontentlength")]
+        public IHttpActionResult GetPageContentLength()
         {
             using (var httpClient = new HttpClient())
             {
-                var googleData = httpClient.GetStringAsync(googleUrl).Result;
-                return Ok(googleData.Length);
+                var pageData = httpClient.GetStringAsync(url).Result;
+                return Ok(pageData.Length);
             }
         }
     }

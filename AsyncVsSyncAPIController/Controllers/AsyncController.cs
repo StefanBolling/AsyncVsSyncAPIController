@@ -8,17 +8,19 @@ namespace AsyncVsSyncAPIController.Controllers
     [RoutePrefix("async")]
     public class AsyncController : ApiController
     {
-        private readonly HttpClient httpClient = new HttpClient();
-        private const string googleUrl = "https://www.google.com";
+        internal static readonly HttpClient httpClient = new HttpClient();
+        private const string url = "http://www.bing.com/";
 
         // Notice that I did not use Using on my async service, this is done on purpose,
         // since the HttpClient and WebClient will cause requests to fail in an async environment.
-        [Route("getgooglepagelength")]
-        public async Task<IHttpActionResult>GetGooglePageLength()
+        [Route("getpagecontentlength")]
+        public async Task<IHttpActionResult>GetPageContentLength()
         {
-            var googleData = await httpClient.GetStringAsync(new Uri(googleUrl));
+            var pageContentLength = 0;
+            var pageData = await httpClient.GetStringAsync(new Uri(url));
+            await Task.Factory.StartNew(() => pageContentLength = pageData.Length);
 
-            return Ok(googleData.Length);
+            return Ok(pageContentLength);
         }
     }
 }
