@@ -8,7 +8,7 @@ namespace AsyncVsSyncAPIController.Controllers
     [RoutePrefix("async")]
     public class AsyncController : ApiController
     {
-        internal static readonly HttpClient httpClient = new HttpClient();
+        private static readonly HttpClient httpClient = new HttpClient();
         private const string url = "http://www.bing.com/";
 
         // Notice that I did not use Using on my async service, this is done on purpose,
