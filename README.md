@@ -4,7 +4,7 @@ When it comes to programming, performance is a subject that never gets old. One 
 
 To help you in your never-ending search for performance I have created this simple .net 4.72 project with an async and a sync controller, that reads the content length from a url. To make things really interesting I have also added two load-tests, that evaluates the result from those controllers. 
 
-Since you will be running both the load test and the page on your own machine, I think you need to set it up in you IIS, so here is what you need to do:
+Since you will be running both the load test and the page on your own machine, I think you need to set it up in your IIS, so here is what you need to do:
 
 1.	Download source-code :)
 2.	Create a web-page in your IIS with a binding to http://apicontrollers/
