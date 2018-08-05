@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LoadTest Name="Sync" Description="" Owner="" storage="c:\stefanbollinggit\asyncvssyncapicontroller\webandloadtestproject\sync.loadtest" Priority="2147483647" Enabled="true" CssProjectStructure="" CssIteration="" DeploymentItemsEditable="" WorkItemIds="" TraceLevel="None" CurrentRunConfig="Run Settings1" Id="bdd3aad2-de6e-44b8-8b1e-e6eeaeb67a13" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <Scenarios>
-    <Scenario Name="Async API-Controller" DelayBetweenIterations="0" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfTestsStarted" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
+    <Scenario Name="Sync API-Controller" DelayBetweenIterations="0" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfTestsStarted" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
       <ThinkProfile Value="0.2" Pattern="NormalDistribution" />
       <LoadProfile Pattern="Constant" InitialUsers="25" />
       <TestMix>
