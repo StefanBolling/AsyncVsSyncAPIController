@@ -26,3 +26,5 @@ I know it can be hard to keep a long chain of methods async all the way, but if 
 Happy Coding!
 
 PS. This the load-tests might require VS2017 Enterprise.
+
+PS2. On my machine the sync average page time was 1.36, and the async was 0,39!
