@@ -14,6 +14,9 @@ namespace AsyncVsSyncAPIController
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            // This line will stop the api-controllers from defaulting to XML-responses,
+            // when no accept-header is specified.
             GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
         }
     }
